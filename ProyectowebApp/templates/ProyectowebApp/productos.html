@@ -1,0 +1,41 @@
+{% extends "ProyectowebApp/base.html"%}
+
+{% load static%}
+
+{% block content%}
+
+<!-- ======= End Page Header ======= -->
+<div class="page-header d-flex align-items-center">
+    <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+                <h2>NUESTROS PRODUCTOS</h2>
+                <p>Nuestros productos nacen gracias a los diferentes procesos que se somete la fruta del coco, tenemos un sistema mediante el cual no generamos desperdicios durante la elaboración en planta, logrando así tener un sistema debió trasformación de materia. .</p>
+
+                <a class="cta-btn" href="contact.html">Contactanos por aquí!</a>
+
+            </div>
+        </div>
+    </div>
+</div><!-- End Page Header -->
+
+{% for producto in pro%}
+
+<div>
+    <p>
+
+
+
+
+    <h2 style="color: white;">{{producto.titulo}}</h2>
+
+    <p style="color: white;">{{producto.contenido}}</p>
+
+    <p><img src="{{producto.imagen.url}}"> </p>
+
+    </p>
+</div>
+
+{%endfor%}
+
+{% endblock%}
